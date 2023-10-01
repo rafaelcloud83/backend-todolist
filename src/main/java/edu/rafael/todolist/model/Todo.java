@@ -13,23 +13,23 @@ public class Todo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String dascricao;
+    private String descricao;
     private boolean realizado;
     private int prioridade;
 
     public Todo() {}
 
-    public Todo(Long id, String nome, String dascricao, boolean realizado, int prioridade) {
+    public Todo(Long id, String nome, String descricao, boolean realizado, int prioridade) {
         this.id = id;
         this.nome = nome;
-        this.dascricao = dascricao;
+        this.descricao = descricao;
         this.realizado = realizado;
         this.prioridade = prioridade;
     }
 
-    public Todo(String nome, String dascricao, boolean realizado, int prioridade) {
+    public Todo(String nome, String descricao, boolean realizado, int prioridade) {
         this.nome = nome;
-        this.dascricao = dascricao;
+        this.descricao = descricao;
         this.realizado = realizado;
         this.prioridade = prioridade;
     }
@@ -50,12 +50,12 @@ public class Todo {
         this.nome = nome;
     }
 
-    public String getDascricao() {
-        return dascricao;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDascricao(String dascricao) {
-        this.dascricao = dascricao;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public boolean isRealizado() {
@@ -79,12 +79,12 @@ public class Todo {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Todo todo = (Todo) o;
-        return realizado == todo.realizado && prioridade == todo.prioridade && Objects.equals(id, todo.id) && Objects.equals(nome, todo.nome) && Objects.equals(dascricao, todo.dascricao);
+        return realizado == todo.realizado && prioridade == todo.prioridade && Objects.equals(id, todo.id) && Objects.equals(nome, todo.nome) && Objects.equals(descricao, todo.descricao);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, dascricao, realizado, prioridade);
+        return Objects.hash(id, nome, descricao, realizado, prioridade);
     }
 
     @Override
@@ -92,7 +92,7 @@ public class Todo {
         return "Todo{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", dascricao='" + dascricao + '\'' +
+                ", descricao='" + descricao + '\'' +
                 ", realizado=" + realizado +
                 ", prioridade=" + prioridade +
                 '}';
