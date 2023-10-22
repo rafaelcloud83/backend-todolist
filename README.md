@@ -24,20 +24,27 @@ Regras de Negócio:
 
 ## Tecnologias e Ferramentas utilizadas
 
+[voltar ao início](#sumário)
+
 * **Java 17**
 * **Spring Boot 3**
 * **API REST**
 * **IntelliJ IDEA Community Edition**
+* **Postman**
 * **Maven**
 
 ## Execução do projeto
 
+[voltar ao início](#sumário)
+
 Para rodar a aplicação, será necessário ter instalado:
 
 * **Java 17**
-* **Maven 3.9.0 ou superior**
+* **Maven 3.9.0 ou superior - utilizei a 3.9.4**
 
 ## Executando manualmente via CLI
+
+[voltar ao início](#sumário)
 
 Primeiramente clone o projeto com o comando:
 
@@ -59,15 +66,23 @@ Para executar o projeto com Maven, basta entrar no diretório raiz do projeto, e
 
 ## Acessando a aplicação
 
+[voltar ao início](#sumário)
+
 Para acessar a aplicação, basta acessar a URL(BaseURL):
 
 http://localhost:8080/todos
+
+Para acessar o Swagger e testar a aplicação:
+
+http://localhost:8080/swagger-ui/index.html
 
 Para acessar o banco H2 em memória:
 
 http://localhost:8080/h2-console
 
 ## Endpoints
+
+[voltar ao início](#sumário)
 
 ### Criar To-do
 
@@ -136,6 +151,8 @@ Resposta:
 
 ### Listar To-do
 
+[voltar ao início](#sumário)
+
 **GET** http://localhost:8080/todos
 
 Resposta:
@@ -160,6 +177,8 @@ Resposta:
 ```
 
 ### Alterar To-do
+
+[voltar ao início](#sumário)
 
 **PUT** http://localhost:8080/todos
 
@@ -197,6 +216,8 @@ Resposta:
 ```
 
 ### Deletar To-do
+
+[voltar ao início](#sumário)
 
 **DELETE** http://localhost:8080/todos/1
 
