@@ -7,6 +7,8 @@ Repositório de um projeto To-do List ou Lista de tarefas.
 * [Business Rules](#business-rules)
 * [Tecnologias e Ferramentas utilizadas](#tecnologias-e-ferramentas-utilizadas)
 * [Execução do projeto](#execução-do-projeto)
+    * [Por CLI](#executando-manualmente-via-cli) 
+    * [Por Docker - Dockerfile](#gerando-a-imagem-docker-com-dockerfile)
 * [Acessando a aplicação](#acessando-a-aplicação)
 * [Endpoints](#endpoints)
     * [Criar To-do](#criar-to-do)
@@ -32,6 +34,7 @@ Regras de Negócio:
 * **IntelliJ IDEA Community Edition**
 * **Postman**
 * **Maven**
+* **Docker**
 
 ## Execução do projeto
 
@@ -40,7 +43,8 @@ Regras de Negócio:
 Para rodar a aplicação, será necessário ter instalado:
 
 * **Java 17**
-* **Maven 3.9.0 ou superior - utilizei a 3.9.4**
+* **Maven - utilizei a versão 3.9.4**
+* **Docker (se for criar uma imagem pelo Docker - utilizei a versão 24.0.7)**
 
 ## Executando manualmente via CLI
 
@@ -50,19 +54,57 @@ Primeiramente clone o projeto com o comando:
 
 - Clonar com SSH
 
-`git clone git@github.com:rafaelcloud83/backend-todolist.git`
+```shell
+git clone git@github.com:rafaelcloud83/backend-todolist.git
+```
 
 - OU Clonar com HTTPS
 
-`git clone https://github.com/rafaelcloud83/backend-todolist.git`
+```shell
+git clone https://github.com/rafaelcloud83/backend-todolist.git
+```
 
 Antes da execução do projeto, realize o `build` da aplicação indo no diretório raiz e executando o comando:
 
-`mvn clean package`
+```shell
+mvn clean package
+```
 
 Para executar o projeto com Maven, basta entrar no diretório raiz do projeto, e executar o comando:
 
-`mvn spring-boot:run`
+```shell
+mvn spring-boot:run
+```
+
+## Gerando a imagem Docker com Dockerfile
+
+[voltar ao início](#sumário)
+
+Primeiramente clone o projeto com o comando:
+
+- Clonar com SSH
+
+```shell
+git clone git@github.com:rafaelcloud83/backend-todolist.git
+```
+
+- OU Clonar com HTTPS
+
+```shell
+git clone https://github.com/rafaelcloud83/backend-todolist.git
+```
+
+Depois de clonar o repositório, realize o `build` da imagem docker indo no diretório raiz e executando o comando:
+
+```shell
+docker build -t todolist .
+```
+
+Para executar o projeto com Docker, basta entrar no diretório raiz do projeto, e executar o comando:
+
+```shell
+docker run -p 8080:8080 todolist
+```
 
 ## Acessando a aplicação
 
